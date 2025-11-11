@@ -1,4 +1,3 @@
-
 let username = prompt("Inserisci il nome dell'utente: "); 
 username == null || username == `Admin` || alert(`non so chi tu sia inserisci username giusto`);
 username == "Admin" && (password = prompt(`Password`));
