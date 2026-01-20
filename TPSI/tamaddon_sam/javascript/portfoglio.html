@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Sam Tamaddon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#38bdf8;
+  --danger:#ef4444;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Inter,sans-serif;
+  background:linear-gradient(180deg,#020617,var(--bg));
+  color:var(--text);
+}
+
+header{
+  text-align:center;
+  padding:5rem 1.5rem 4rem;
+}
+
+header h1{
+  font-size:3rem;
+}
+
+header h1 span{color:var(--accent);}
+
+header p{
+  margin-top:1rem;
+  color:var(--muted);
+}
+
+nav{
+  margin-top:2rem;
+}
+
+nav a{
+  color:var(--text);
+  margin:0 0.8rem;
+  text-decoration:none;
+}
+
+nav a:hover{color:var(--accent);}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:4rem 1.5rem;
+}
+
+section h2{
+  font-size:2rem;
+  margin-bottom:2rem;
+  border-left:4px solid var(--accent);
+  padding-left:1rem;
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:2rem;
+  align-items:center;
+}
+
+.avatar{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),#22d3ee);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3rem;
+  font-weight:700;
+  color:#020617;
+  margin:auto;
+}
+
+.skills{
+  margin-top:1rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.6rem;
+}
+
+.skill{
+  background:var(--card);
+  padding:0.5rem 0.9rem;
+  border-radius:999px;
+  font-size:0.85rem;
+  border:1px solid #1f2937;
+}
+
+/* TENDINE */
+details{
+  background:var(--card);
+  border:1px solid #1f2937;
+  border-radius:1rem;
+  padding:1.4rem;
+  margin-bottom:1rem;
+}
+
+summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:600;
+}
+
+summary::-webkit-details-marker{display:none;}
+
+summary span{
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* PROGETTI */
+.projects{
+  margin-top:1.2rem;
+  display:grid;
+  gap:1rem;
+}
+
+.project{
+  background:#020617;
+  border:1px solid #1f2937;
+  border-radius:0.8rem;
+  padding:1rem;
+}
+
+.project h4{margin-bottom:0.3rem;}
+
+.project p{
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+/* TENDINA INTERNA */
+.inner{
+  border:1px solid var(--danger);
+}
+
+.inner summary{
+  color:var(--danger);
+}
+
+.inner a{
+  display:inline-block;
+  margin-top:0.6rem;
+  color:var(--danger);
+  text-decoration:none;
+}
+
+footer{
+  text-align:center;
+  padding:2rem;
+  color:var(--muted);
+  font-size:0.85rem;
+}
+
+@media(max-width:768px){
+  .about{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Ciao, sono <span>Sam Tamaddon</span></h1>
+  <p>Studente e sviluppatore</p>
+  <nav>
+    <a href="#about">Chi sono</a>
+    <a href="#school">Scuola</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>Chi sono</h2>
+  <div class="about">
+    <div class="avatar">S</div>
+    <div>
+      <p>
+        Mi chiamo Sam. Realizzo siti web e progetti informatici.
+        Programmo in HTML, CSS, JavaScript, Python e C.
+      </p>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">C</div>
+        <div class="skill">Arduino</div>
+        <div class="skill">Git</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="school">
+<h2>Percorso scolastico</h2>
+
+<details class="year">
+  <summary>1ª Superiore <span>2023 / 2024</span></summary>
+  <p>Avvio del percorso e basi informatiche.</p>
+</details>
+
+<details class="year">
+  <summary>2ª Superiore <span>2024 / 2025</span></summary>
+  <p>Sviluppo della logica e prime applicazioni.</p>
+</details>
+
+<details class="year">
+  <summary>3ª Superiore <span>2025 / 2026</span></summary>
+  <p>Approfondimento tecnico e programmazione.</p>
+</details>
+
+<details class="year">
+  <summary>4ª Superiore <span>2026 / 2027</span></summary>
+
+  <div class="projects">
+
+    <div class="project">
+      <h4>Portfolio Web</h4>
+      <p>Sito personale responsive.</p>
+    </div>
+
+    <div class="project">
+      <h4>Calcolatore Codice Fiscale</h4>
+      <p>Applicazione web per il calcolo automatico.</p>
+    </div>
+
+    <details class="inner sub">
+      <summary>Violenza di genere</summary>
+      <p>
+        Progetto di educazione civica sul Codice Rosso
+        e sulla storia delle sorelle Mirabal.
+      </p>
+      <a href="tamaddon_violenza_di_genere.html" target="_blank">
+        Apri progetto
+      </a>
+    </details>
+
+  </div>
+</details>
+
+<details class="year">
+  <summary>5ª Superiore <span>2027 / 2028</span></summary>
+  <p>Consolidamento finale e preparazione all’esame.</p>
+</details>
+
+</section>
+
+<footer>
+  <p>&copy; Sam Tamaddon</p>
+</footer>
+
+<script>
+const years = document.querySelectorAll(".year");
+
+years.forEach(y => {
+  y.addEventListener("toggle", () => {
+    if (y.open) {
+      years.forEach(o => {
+        if (o !== y) o.removeAttribute("open");
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

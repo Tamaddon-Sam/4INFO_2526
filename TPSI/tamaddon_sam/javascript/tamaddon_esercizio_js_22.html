@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Snake</title>
+</head>
+
+<body>
+
+<canvas id="c" width="400" height="400" style="border:1px solid black"></canvas>
+
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+
+const size = 20;
+
+let snakeX = 200;
+let snakeY = 200;
+
+let dx = size;
+let dy = 0;
+
+let foodX = 100;
+let foodY = 100;
+
+document.addEventListener("keydown", move);
+
+function move(e) {
+  if (e.keyCode === 37) { dx = -size; dy = 0; }
+  if (e.keyCode === 38) { dx = 0; dy = -size; }
+  if (e.keyCode === 39) { dx = size; dy = 0; }
+  if (e.keyCode === 40) { dx = 0; dy = size; }
+}
+
+function game() {
+  ctx.clearRect(0, 0, 400, 400);
+
+  snakeX += dx;
+  snakeY += dy;
+
+  // serpente
+  ctx.fillStyle = "green";
+  ctx.fillRect(snakeX, snakeY, size, size);
+
+  // cibo
+  ctx.fillStyle = "red";
+  ctx.fillRect(foodX, foodY, size, size);
+
+  // mangia
+  if (snakeX === foodX && snakeY === foodY) {
+    foodX = Math.floor(Math.random() * 20) * size;
+    foodY = Math.floor(Math.random() * 20) * size;
+  }
+
+  // muri
+  if (
+    snakeX < 0 || snakeX >= 400 ||
+    snakeY < 0 || snakeY >= 400
+  ) {
+    alert("Game Over");
+    snakeX = 200;
+    snakeY = 200;
+  }
+}
+
+setInterval(game, 200);
+</script>
+
+</body>
+</html>
