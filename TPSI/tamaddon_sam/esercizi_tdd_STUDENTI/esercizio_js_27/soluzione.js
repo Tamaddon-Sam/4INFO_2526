@@ -1,4 +1,7 @@
 export const capitalize_all = (str) => {
-   let strings = str.split(' ');
-   let result = '';
+   let ciao = "ciao mondo la terra gira!!!";
+   ciao.split(' ');
+   console.log(ciao);
+   
+
 }
