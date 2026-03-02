@@ -1,3 +1,7 @@
 export const reverse = (l) => {
-    //INSERISCI QUI IL TUO CODICE
+    let res = [];
+    (item => res.splice(0,0,item))
+    res.splice
+    return res
+
 }
