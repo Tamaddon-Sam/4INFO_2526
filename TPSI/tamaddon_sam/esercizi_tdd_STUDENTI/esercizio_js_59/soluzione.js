@@ -1,3 +1,5 @@
 export function deduplicate(arr) {
-    //INSERISCI QUI IL TUO CODICE
+    let insieme = new Set(arr);
+    return Array.from(insieme);
 }
+    
